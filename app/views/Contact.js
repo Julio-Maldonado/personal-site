@@ -16,22 +16,9 @@ const validateText = (text) => {
 };
 
 const messages = [
-  'hi',
-  'hello',
-  'hola',
-  'you-can-email-me-at-literally-anything! Really',
-  'well, not anything. But most things',
-  'like-this',
-  'or-this',
-  'but not this :(  ',
-  'you.can.also.email.me.with.specific.topics.like',
-  'just-saying-hi',
-  'please-work-for-us',
-  'help',
-  'admin',
-  'or-I-really-like-your-website',
-  'I\'ll-stop-distracting-you-now',
-  'thanks',
+  'julio.maldonado.guzman',
+  'julioharlingen',
+  'harlingenjulio',
 ];
 
 const useInterval = (callback, delay) => {
@@ -69,12 +56,12 @@ const Contact = () => {
       newChar = 0;
     }
     if (newIdx === messages.length) {
-      setIsActive(false);
-    } else {
-      updateMessage(messages[newIdx].slice(0, newChar));
-      updateIter(newIdx);
-      updateChar(newChar + 1);
+      newIdx = 0;
+      // setIsActive(false);
     }
+    updateMessage(messages[newIdx].slice(0, newChar));
+    updateIter(newIdx);
+    updateChar(newChar + 1);
   }, isActive ? delay : null);
 
   return (
@@ -87,18 +74,22 @@ const Contact = () => {
           </div>
         </header>
         <div className="email-at">
-          <p>Feel free to get in touch. You can email me at: </p>
-          <div
+          <p>Feel free to reach out. You can email me at&nbsp;
+            <a href={`mailto:${message}@gmail.com`}>
+              <span>{message}@gmail.com</span>.
+            </a>
+          </p>
+          {/* <div
             className="inline-container"
             style={validateText(message) ? {} : { color: 'red' }}
             onMouseEnter={() => setIsActive(false)}
             onMouseLeave={() => (idx < messages.length) && setIsActive(true)}
           >
-            <a href={validateText(message) ? `mailto:${message}@mldangelo.com` : ''}>
-              <span>{message}</span>
-              <span>@mldangelo.com</span>
+            <a href={validateText(message) ? `mailto:${message}@gmail.com` : ''}>
+              <span>julio.maldonado.guzman@gmail.com</span>.
             </a>
-          </div>
+          </div> */}
+          <p>But any of my social medias work well too.</p>
         </div>
         <ul className="icons">
           {data.map(s => (

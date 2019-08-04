@@ -13,17 +13,18 @@ const Nav = () => (
         <img src={`${BASE_PATH}/images/me_icon.jpg`} alt="" />
       </Link>
       <header>
-        <h2>Michael D&apos;Angelo</h2>
-        <p><a href="mailto:michael.l.dangelo@gmail.com">michael.l.dangelo@gmail.com</a></p>
+        <h2>Julio Maldonado</h2>
+        <p><a href="mailto:julio.maldonado.guzman@gmail.com">julio.maldonado.guzman@gmail.com</a></p>
       </header>
     </section>
 
     <section className="blurb">
       <h2>About</h2>
-      <p>Hi, I&apos;m Michael. I like building things.
-            I am a <a href="https://icme.stanford.edu/">Stanford ICME</a> graduate, YC Alumni, and
-            the co-founder and CTO of <a href="http://arthena.com">Arthena</a>. Before Arthena I was
-            at <a href="http://matroid.com">Matroid</a>, <a href="http://planet.com">Planet</a>, <a href="http://planetaryresources.com">Planetary Resources</a>, <a href="http://facebook.com">Facebook</a>, and <a href="http://seds.org">SEDS</a>.
+      <p>Hey, I&apos;m Julio. I like helping people.
+            I am a <a href="https://www.ilrc.org/daca" target="_blank" rel="noopener noreferrer">DACA</a> recipient, <a href="https://tamu.edu/" target="_blank" rel="noopener noreferrer">Texas A&amp;M University</a> alumna, and
+            Software Engineer at <a href="http://qualtrics.com" target="_blank" rel="noopener noreferrer">Qualtrics</a>. A few things I&#39;m proud of include making it possible for&nbsp;
+        <a href="https://www.statesman.com/opinion/20190708/commentary-inland-border-patrol-checkpoints-shouldnt-hurt-those-who-live-here?fbclid=IwAR3e0ZCDroG-70UK0fQwzONK2rOb7-epPzj5mvzbtw53fjKgVsFftKGjkUM" target="_blank" rel="noopener noreferrer">my parents see me graduate</a>,&nbsp;
+        <a href="https://oaktrust.library.tamu.edu/handle/1969.1/175413" target="_blank" rel="noopener noreferrer">my research</a> with <a href="http://faculty.cse.tamu.edu/davis/welcome.html" target="_blank" rel="noopener noreferrer">Dr. Timothy Davis</a>, and my work on <Link to="/resume">various projects</Link>.
       </p>
       <ul className="actions">
         <li>
@@ -38,7 +39,7 @@ const Nav = () => (
           <li key={s.label}><a href={s.link}><FontAwesomeIcon icon={s.icon} /></a></li>
         ))}
       </ul>
-      <p className="copyright">&copy; Michael D&apos;Angelo <Link to="/">mldangelo.com</Link>.</p>
+      <p className="copyright">&copy; Julio Maldonado <Link to="/">juliomaldonado.com</Link>.</p>
     </section>
   </section>
 );

@@ -1,83 +1,76 @@
 
 #### Intro
-I am a co-founder and the CTO of [Arthena](https://arthena.com) where I work on engineering infrastructure and build tools to price fine art. My primary job functions are as a data scientist and software engineer.
-<br>
-I am available to consult on interesting projects. I am particularly interested in social impact, education, inclusivity, and space. I enjoy advising companies and may even be available for pro-bono work depending on the time commitment and the project. If you would like to arrange a meeting, I am based in New York but travel to the San Francisco Bay Area frequently.
+I am a DACA recipient, TAMU Alumna, and software engineer. I'm passionate about advocating the underserved and underrepresented, as well as solving problems for them. Technology has given me so much opportunity, so I hope to use my technical background to provide opportunities for others. I'm available to consult interesting projects, offer advice, or just talk - feel free to [reach out](/contact).
+<!-- <br>
+I am available to consult on interesting projects. I am particularly interested in social impact, education, inclusivity, and space. I enjoy advising companies and may even be available for pro-bono work depending on the time commitment and the project. If you would like to arrange a meeting, I am based in New York but travel to the San Francisco Bay Area frequently. -->
 <br><br>
 #### Currently
-At Arthena I have learned how to build teams and manage people, build relationships with customers, sell enterprise products, and build on-line predictive models for production environments. I've also learned how to build and maintain large web applications (see [arthena.com](https://arthena.com)).
+I recently moved to Seattle from the [RGV](https://www.welcomehomergv.com/) to start my career as a Software Engineer at [Qualtrics](https://qualtrics.com).
+
+<!-- At Arthena I have learned how to build teams and manage people, build relationships with customers, sell enterprise products, and build on-line predictive models for production environments. I've also learned how to build and maintain large web applications (see [arthena.com](https://arthena.com)). -->
 <br><br>
 #### Some History
 
-- My parents put a computer in my bedroom in 1993 when I was 3. It was an old Tandy that ran MS-DOS. My favorite games were Street Rod 2, Wolfenstein 3D, and Tom and Jerry. It had a mechanical keyboard and a turbo button. To this day, I still don't know what pressing the turbo button really did.
+- Born in [Matamoros, Tamaulipas](https://www.youtube.com/watch?v=cT9fFclOjdo)
 
-- We subscribed to AOL in 1995. I still remember installing it from a floppy disk onto our brand new Packard Bell. It took years for me to send my first email.
+- Grew up in [Harlingen, Texas](https://www.youtube.com/watch?v=PHd-p1Jr9x4)
 
-- In the summer of 1996, my uncle purchased [MegaRace](https://en.wikipedia.org/wiki/MegaRace) from [Media Play](https://en.wikipedia.org/wiki/Media_Play) and installed it on my mom's work computer. I might have endangered her business by using her computer too much.
+- At 15, practiced MMA at [Dave's Weight Club](https://www.valleymorningstar.com/2016/02/03/being-an-inspiration-dave-rempe/)
 
-- At 7, I discovered the mini-games hidden in Microsoft Office. I also beat Minesweeper on expert for the first time.
+- At 16, received [DACA status](https://www.facebook.com/julio.maldonado.904/posts/2200428683380644) in 2014
 
-- At 8, my parents bought me a Sony Mavica MVC-FD71 digital camera after I stole their SLR one too many times. It could fit 10 images to a floppy disk at a 0.3MP resolution. I still have it and it still works. I've been taking photographs ever since, now with a Nikon D750, D800, and occasionally with a Mamiya 6II.
+- 2 months later, began washing dishes at Little Caesars for 2 years
 
-- At 10, I built my first website with Microsoft FrontPage on our Pentium III [Gateway](https://en.wikipedia.org/wiki/Gateway,_Inc.). My website was terrible.
+- At 17, accepted to A&M for [kinesiology](https://hlkn.tamu.edu/)
 
-- I was 11 when I built my first [Tesla Coil](https://en.wikipedia.org/wiki/Tesla_coil) (without the permission of my parents). Over the next few years, I built several more including one of the first audio modulated coils and one of the first DRSSTCs.
+- At 18, involved in [Hall Council at Walton Hall](http://www.thebatt.com/walton-wednesday/collection_e3b6974a-db93-11e5-a601-bb27ad710b6d.html#1) [where we stood up to racism](http://www.thebatt.com/news/i-am-walton/article_b5cd61bc-db87-11e5-85e8-c377240bd6aa.html)
 
-- When I was 12, I set the all-time high record at my local laser tag facility by reverse engineering the charging station and weapon protocols with a photo-resistor, micro-cassette recorder, and a lot of patience. I was unstoppable.
+- At 19, transferred to aerospace engineering at the end of freshman year
 
-- At 13, I went to space camp and fell in love. I went back two more times and promised myself that I'd work in space. I've since helped build three generations of satellites and have tangentially worked on two more.
+- Later that year, changed to computer engineering a semester later due to lack of jobs in aerospace for non-us citizens as [other immigration legislation affected Texas](https://www.theeagle.com/news/local/sanctuary-legislation-could-affect-universities-colleges/article_250d2b1c-5d40-5241-80c7-34d00b44a62f.html)
 
-- At 14, I was almost expelled for finding a backdoor into my high school's file server and telling everyone but the faculty members about it. Later that year, I figured out how to turn off the internet firewall by editing system registry keys. I anonymously shared my work months later.
+- At 20, switched to computer science at the end of sophomore year after trying out coding for the first time
 
-- At 16, I participated in a foreign exchange program in Dortmund, Germany. Since then, I've gone back almost every year.
+- At 21, completed research with [Dr. Timothy Davis](http://faculty.cse.tamu.edu/davis/welcome.html) and [wrote a thesis on it](https://oaktrust.library.tamu.edu/handle/1969.1/175413)
 
-- 14 - 17, I played a lot of video games. My favorites included Counter Strike Source, Command and Conquer 3, Halo 2, and Age of Empires 3.
+- [Joined SGA](http://www.thebatt.com/news/student-senate-supports-bringing-sul-ross-statue-stop-back-to/article_e9a5d504-f3a9-11e8-a8fc-5f813f022305.html?fbclid=IwAR0LGlPbXNsznuxjCIBIPCOs-UsYCYCQ4b-f-WU4VAWAuzQCFau74OojY-s) at TAMU to discover what it's like to [impact policy](https://senate.tamu.edu/wp-content/uploads/2018/11/S.B.-71-14-The-Rewriting-of-S.R.-7-Bill.pdf)
 
-- At 18, In the summer before college, my friends and I started playing <a href="https://en.wikipedia.org/wiki/Quidditch_(sport)">Muggle Quidditch</a>. We went on to start over 8 teams in the [International Quidditch Association](https://en.wikipedia.org/wiki/International_Quidditch_Association) including the [Buffalo Quidditch Society](https://www.facebook.com/buffaloquidditch/). At our height, we were ranked third in the IQA. Although I don't play anymore, you can still see pictures of me holding a broom while wearing a chess camp t-shirt on facebook.
+- [Tutored computer science courses](https://engineering.tamu.edu/cse/academics/peer-teachers/current-peer-teachers.html), resident advisor at Walton Hall, and worked various tech jobs throughout A&M to pay for university as DACA recipients cannot take out federal loans or qualify for federal aid
 
-- At 19, I took my first graduate course and published my first academic paper.
+- [Made it possible for my parents to see me graduate](https://www.facebook.com/photo.php?fbid=2184177261672453&set=a.369577416465789&type=3&theater) and [advocated for others in similar situations](https://www.statesman.com/opinion/20190708/commentary-inland-border-patrol-checkpoints-shouldnt-hurt-those-who-live-here?fbclid=IwAR3e0ZCDroG-70UK0fQwzONK2rOb7-epPzj5mvzbtw53fjKgVsFftKGjkUM) thanks to some really good people
 
-- At 20, I coauthored a grant to build a satellite and managed a 60+ person team through the end of undergrad. You can read more about that [here](https://ubnl.space/glados/).
-
-You can ask me in person for other stories that I'm afraid to share with the internet.
-<br><br>
 #### I like
-- Skiing
-- Sailing and the sea
-- Space
-- Summer
-- [Books](https://www.goodreads.com/mdangelo)
-- Colored pencils
-- NPR podcasts
-- [Photography](https://instagram.com/dangelosaurus)
 
-#### Travel / Geography
+- [Fitness](https://www.instagram.com/_julio_maldonado/)
+- [Good music](https://open.spotify.com/playlist/5VO2Q1mVenlPvFPnUz9bus)
+- [Lifting weights](https://www.instagram.com/_julio_maldonado/)
+- [Longboarding](https://www.instagram.com/_julio_maldonado/)
+- Sightseeing
+- [Traveling](https://drive.google.com/open?id=1LbTz4tuKzUDzEGc4j2gB4BFUT_5WUCd4&usp=sharing)
+- [Photography](https://www.instagram.com/_julio_maldonado/)
+- [Bon Iver](https://boniver.org/)
+- Watching MMA Fights
+- [Comet](https://www.imdb.com/title/tt2965412/)
 
-- I am from originally from Buffalo, New York. I have since lived in
+<!-- #### Travel / Geography
+
+- I am from originally from Matamoros, Tamaulipas. I have since lived in
 Palo Alto, Mountain View, San Francisco, Seattle, and New York.
 
-- I've been to ~ 50 countries, some of which I have forgotten, and many of which I would like to revisit.
-
-- In 2016, I visited: Canada, Ethiopia, Austria, Germany, Belgium, Ireland, Northern Ireland, Italy, Romania, Sweden, Norway, Svalbard, Panama, Costa Rica, Uganda, Japan, and the UAE, mostly in that order.
-
-- In 2017, I visited: Canada, Japan, Denmark, Germany, Sweden, Estonia, Russia, the Netherlands, Belgium, the U.K., Spain, Iceland, France, Switzerland, Ethiopia, and Luxembourg.
-
-- In 2018, I visited: Canada, France, Italy, Israel, and the U.K.
-
-- In 2019, I plan to visit: the U.K., France, Canada, Australia, Chile, Nepal, and Norway.
-
-- I am an Oregon Trail II enthusiast.
+- I've been to ~ 50 countries, some of which I have forgotten, and many of which I would like to revisit. -->
 
 #### Fun Facts
 
-- I have a list of thousands of ideas, like creating matching bow ties for cats and humans.
-- I almost always have a sketchbook with me.
-- I can't locate every country on a map.
-- I operate a [small angel fund](http://skepticalinvestments.biz/) with terrible returns.
-- I added this page because so many people complained that my site was just a resume.
+- I changed my major 3 times.
+- I long board on my free time.
+- I've had an amateur kickboxing fight (that I lost).
+- I'm a big fan of [Mr. Robot](https://www.usanetwork.com/mrrobot) and [Silicon Valley](https://www.hbo.com/silicon-valley).
+- I had lunch with a marketing manager from [Taco Palenque](https://www.tacopalenque.com/) for my 22nd birthday.
 
 #### I dream of
-- always finding inspiration.
-- enabling a brighter future.
-- doing better.
-- no one checking my commit history for early drafts of this file.
+
+- making change.
+- enabling others to reach their goals, especially through technology.
+- being a better person.
+- inspiring others.
+- the [DREAM Act](https://immigrationforum.org/article/dream-act-2017-bill-summary/?gclid=CjwKCAjwm4rqBRBUEiwAwaWjjL_tgy_fZ3ER2hRSbfIvmAPJMCH50-tod4SjQ-cp4UawxO5X-KFM5RoCU0EQAvD_BwE).

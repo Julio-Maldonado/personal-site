@@ -6,11 +6,11 @@ const data = {
   countries: {
     label: 'Countries visited',
     value: 53,
-    link: 'https://www.google.com/maps/d/embed?mid=1iBBTscqateQ93pWFVfHCUZXoDu8&z=2',
+    link: 'https://drive.google.com/open?id=1LbTz4tuKzUDzEGc4j2gB4BFUT_5WUCd4&usp=sharing',
   },
   location: {
     label: 'Current city',
-    value: 'New York, NY',
+    value: 'Seattle, WA',
   },
 };
 

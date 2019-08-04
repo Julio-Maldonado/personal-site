@@ -2,10 +2,13 @@
 
 .bm-item-list {
   margin-top: 0;
+  // color: silver;
+  // background-color: silver;
 }
 
+
 .menu-hover {
- margin-right: 1em;
+  margin-right: 1em;
 }
 
 .menu-hover:hover {
@@ -13,7 +16,15 @@
 }
 
 .hamburger-ul {
-  display: block;
+  color: silver;
+  // background-color: silver;
+  // display: block;
+  // color: black;
+  // background-color: black;
+  // li {
+  //   background: white;
+  //   outline: 0;
+  // }
 
   li a h3 {
     border: 0;
@@ -30,6 +41,7 @@
     display: block !important;
   }
 
+
   h3 {
     font-size: 0.7em;
   }
@@ -38,3 +50,30 @@
     border-top: none;
   }
 }
+
+// @media(hover: hover) and (pointer: fine) {
+//   .hamburger-ul {
+//     li a h3:hover {
+//       color: _palette(accent);
+//     }
+
+//     li a h3:active {
+//       background-color: black;
+//     }
+  
+//     li a h3:focus {
+//       background-color: black;
+//     }
+//   } 
+//   li a h3:hover {
+//     color: _palette(accent);
+//   }
+
+//   li a h3:active {
+//     background-color: black;
+//   }
+
+//   li a h3:focus {
+//     background-color: black;
+//   }
+// }

@@ -23,10 +23,11 @@ const Hamburger = () => {
           )}
         </ul>
       </nav>
-      <Menu right isOpen={open}>
+      <Menu right isOpen={open} className="main-menu">
         <ul className="hamburger-ul">
           {routes.map(l => (
-            <li key={l.label}>
+            // eslint-disable-next-line jsx-a11y/no-noninteractive-element-interactions
+            <li key={l.label} className="test" onClick="">
               <Link to={l.path} onClick={() => setOpen(!open)}>
                 <h3 className={l.index && 'index-li'}>{l.label}</h3>
               </Link>

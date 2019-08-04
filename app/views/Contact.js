@@ -75,7 +75,7 @@ const Contact = () => {
         </header>
         <div className="email-at">
           <p>Feel free to reach out. You can email me at&nbsp;
-            <a href={`mailto:${message}@gmail.com`}>
+            <a href={`mailto:${message}@gmail.com`} target="_blank" rel="noopener noreferrer">
               <span>{message}@gmail.com</span>.
             </a>
           </p>
@@ -93,7 +93,7 @@ const Contact = () => {
         </div>
         <ul className="icons">
           {data.map(s => (
-            <li key={s.label}><a href={s.link}><FontAwesomeIcon icon={s.icon} /></a></li>
+            <li key={s.label}><a href={s.link} target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={s.icon} /></a></li>
           ))}
         </ul>
       </article>

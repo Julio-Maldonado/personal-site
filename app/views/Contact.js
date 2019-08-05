@@ -75,7 +75,7 @@ const Contact = () => {
         </header>
         <div className="email-at">
           <p>Feel free to reach out. You can email me at&nbsp;
-            <a href={`mailto:${message}@gmail.com`} target="_blank" rel="noopener noreferrer">
+            <a href={`mailto:${message}@gmail.com`}>
               <span>{message}@gmail.com</span>.
             </a>
           </p>

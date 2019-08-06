@@ -25,7 +25,20 @@
 			margin-bottom: 2em;
 		}
 	}
+	
 	.experience {
+		.title {
+			text-align: center;
+		}
+		.job {
+			margin: 1em;
+			p{
+				margin: 0;
+			}
+		}
+	}
+
+	.leadership {
 		.title {
 			text-align: center;
 		}

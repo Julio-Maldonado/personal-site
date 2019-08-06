@@ -13,7 +13,7 @@ const Index = () => (
           {/* <p>A beautiful, responsive, react app written with modern Javascript.</p> */}
         </div>
       </header>
-      <p>Welcome to my personal website. You can find out more <Link to="/about">about my story</Link>,
+      <p>Welcome to my personal website. You can find out more <Link to="/about">about me</Link>,
         or you can check out my {' '}
         <Link to="/resume">resume</Link>, {' '}
         <Link to="/projects">projects</Link>, {' '}

@@ -58,7 +58,7 @@ const data = [
     ],
     // image: '/images/projects/nearestdollar.jpg',
     date: '2019-07-19',
-    desc: 'Soon available on the App Store and Play Store. '
+    desc: 'Soon to be available on the App Store and Play Store. '
       + 'Quickly make yourself your own Sqr. '
       + 'Then have your new friend, follower, coworker, or business partner scan it to save your contact. '
       + 'Sharing your contact has never been easier or more convenient.',
@@ -73,7 +73,7 @@ const data = [
       '/videos/Final_July_4_Fireworks.mp4',
     ],
     date: '2019-07-04',
-    desc: 'I love the USA and Mexico. '
+    desc: 'I love the country I live in, the USA, and the country I was born in, Mexico. '
       + 'The 4th of July is a day where I can celebrate this country and the incredible freedoms we enjoy, pero nunca me olvidaré de mi cultura o mi gente. '
       + 'Try it out to create your own fireworks without the clean-up.',
     type: 'local',

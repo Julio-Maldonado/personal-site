@@ -27,15 +27,15 @@ I recently moved to Seattle from the [RGV](https://www.welcomehomergv.com/) to s
 
 - At 19, transferred to aerospace engineering at the end of freshman year
 
-- Later that year, changed to computer engineering a semester later due to lack of jobs in aerospace for non-us citizens as [other immigration legislation affected Texas](https://www.theeagle.com/news/local/sanctuary-legislation-could-affect-universities-colleges/article_250d2b1c-5d40-5241-80c7-34d00b44a62f.html)
+- A semester later, changed to computer engineering due to lack of jobs in aerospace for non-us citizens as [other immigration legislation affected Texas](https://www.theeagle.com/news/local/sanctuary-legislation-could-affect-universities-colleges/article_250d2b1c-5d40-5241-80c7-34d00b44a62f.html)
 
-- At 20, switched to computer science at the end of sophomore year after trying out coding for the first time
+- At 20, switched to computer science after trying out coding for the first time
 
 - At 21, completed research with [Dr. Timothy Davis](http://faculty.cse.tamu.edu/davis/welcome.html) and [wrote a thesis on it](https://oaktrust.library.tamu.edu/handle/1969.1/175413)
 
 - [Joined SGA](http://www.thebatt.com/news/student-senate-supports-bringing-sul-ross-statue-stop-back-to/article_e9a5d504-f3a9-11e8-a8fc-5f813f022305.html?fbclid=IwAR0LGlPbXNsznuxjCIBIPCOs-UsYCYCQ4b-f-WU4VAWAuzQCFau74OojY-s) at TAMU to discover what it's like to [impact policy](https://senate.tamu.edu/wp-content/uploads/2018/11/S.B.-71-14-The-Rewriting-of-S.R.-7-Bill.pdf)
 
-- [Tutored computer science courses](https://engineering.tamu.edu/cse/academics/peer-teachers/current-peer-teachers.html), resident advisor at Walton Hall, and worked various tech jobs throughout A&M to pay for university as DACA recipients cannot take out federal loans or qualify for federal aid
+- Worked 2 - 3 jobs concurrently through college ranging from [tutoring computer science courses](https://engineering.tamu.edu/cse/academics/peer-teachers/current-peer-teachers.html), resident advisor at Walton Hall, and various tech jobs to pay for university as DACA recipients cannot take out federal loans or qualify for federal aid
 
 - [Made it possible for my parents to see me graduate](https://www.facebook.com/photo.php?fbid=2184177261672453&set=a.369577416465789&type=3&theater) and [advocated for others in similar situations](https://www.statesman.com/opinion/20190708/commentary-inland-border-patrol-checkpoints-shouldnt-hurt-those-who-live-here?fbclid=IwAR3e0ZCDroG-70UK0fQwzONK2rOb7-epPzj5mvzbtw53fjKgVsFftKGjkUM) thanks to some really good people
 

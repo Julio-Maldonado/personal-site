@@ -1,3 +1,4 @@
+/* eslint-disable no-nested-ternary */
 import React from 'react';
 import { Link } from 'react-router-dom';
 
@@ -28,7 +29,11 @@ const Nav = () => (
       </p>
       <ul className="actions">
         <li>
-          {window.location.pathname !== `${BASE_PATH}/resume` ? <Link to="/resume" className="button">Learn More</Link> : <Link to="/about" className="button">About Me</Link>}
+          {window.location.pathname === `${BASE_PATH}` || window.location.pathname === `${BASE_PATH}/`
+            ? <Link to="/about" className="button">Learn More</Link>
+            : window.location.pathname !== `${BASE_PATH}/resume`
+              ? <Link to="/resume" className="button">Learn More</Link>
+              : <Link to="/about" className="button">About Me</Link>}
         </li>
       </ul>
     </section>

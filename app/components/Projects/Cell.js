@@ -3,7 +3,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import dayjs from 'dayjs';
-import aTag from '../CustomaTag';
+// import aTag from '../CustomaTag';
 
 class Cell extends React.Component {
   state = {

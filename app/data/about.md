@@ -1,6 +1,6 @@
 
 #### Intro
-I am a DACA recipient, TAMU Alumna, and software engineer. I'm passionate about advocating the underserved and underrepresented, as well as solving problems for them. Technology has given me so much opportunity, so I hope to use my technical background to provide opportunities for others. I'm available to consult interesting projects, offer advice, or just talk - feel free to [reach out](/contact).
+I am a DACA recipient, TAMU Alumna, and software engineer. I'm passionate about advocating for the underserved and underrepresented, as well as solving problems for them. Technology has given me so much opportunity, so I hope to use my technical background to provide opportunities for others. I'm available to consult interesting projects, offer advice, or just talk - feel free to [reach out](/contact).
 <!-- <br>
 I am available to consult on interesting projects. I am particularly interested in social impact, education, inclusivity, and space. I enjoy advising companies and may even be available for pro-bono work depending on the time commitment and the project. If you would like to arrange a meeting, I am based in New York but travel to the San Francisco Bay Area frequently. -->
 <br><br>
@@ -17,7 +17,7 @@ I recently moved to Seattle from the [RGV](https://www.welcomehomergv.com/) to s
 
 - At 15, practiced MMA at [Dave's Weight Club](https://www.valleymorningstar.com/2016/02/03/being-an-inspiration-dave-rempe/)
 
-- At 16, received [DACA status](https://www.facebook.com/julio.maldonado.904/posts/2200428683380644) in 2014
+- At 16, received [DACA status](https://www.facebook.com/julio.maldonado.904/posts/2200428683380644)
 
 - 2 months later, began washing dishes at Little Caesars for 2 years
 
@@ -29,7 +29,7 @@ I recently moved to Seattle from the [RGV](https://www.welcomehomergv.com/) to s
 
 - A semester later, changed to computer engineering due to lack of jobs in aerospace for non-us citizens as [other immigration legislation affected Texas](https://www.theeagle.com/news/local/sanctuary-legislation-could-affect-universities-colleges/article_250d2b1c-5d40-5241-80c7-34d00b44a62f.html)
 
-- At 20, switched to computer science after trying out coding for the first time
+- At 20, switched to computer science after coding for the first time
 
 - At 21, completed research with [Dr. Timothy Davis](http://faculty.cse.tamu.edu/davis/welcome.html) and [wrote a thesis on it](https://oaktrust.library.tamu.edu/handle/1969.1/175413)
 

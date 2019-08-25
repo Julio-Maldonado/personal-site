@@ -7,13 +7,13 @@ import Main from '../layouts/Main';
 
 import data from '../data/contact';
 
-// Validates the first half of an email address.
-const validateText = (text) => {
-  // NOTE: Passes RFC 5322 but not tested on google's standard.
-  // eslint-disable-next-line no-useless-escape
-  const re = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))$/;
-  return re.test(text) || text.length === 0;
-};
+// // Validates the first half of an email address.
+// const validateText = (text) => {
+//   // NOTE: Passes RFC 5322 but not tested on google's standard.
+//   // eslint-disable-next-line no-useless-escape
+//   const re = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))$/;
+//   return re.test(text) || text.length === 0;
+// };
 
 const messages = [
   'julio.maldonado.guzman',
@@ -74,7 +74,10 @@ const Contact = () => {
           </div>
         </header>
         <div className="email-at">
-          <p>Feel free to reach out. You can email me at&nbsp;
+          <p>I&apos;m available to speak at events, interview for podcasts, consult interesting projects,
+            {' '}answer questions about code, or just talk.
+            <br />
+            Feel free to reach out. You can email me at&nbsp;
             <a href={`mailto:${message}@gmail.com`}>
               <span>{message}@gmail.com</span>.
             </a>
@@ -89,7 +92,7 @@ const Contact = () => {
               <span>julio.maldonado.guzman@gmail.com</span>.
             </a>
           </div> */}
-          <p>But any of my social medias work well too.</p>
+          <p>Any of my social medias work well too.</p>
         </div>
         <ul className="icons">
           {data.map(s => (

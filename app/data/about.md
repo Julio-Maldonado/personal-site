@@ -1,6 +1,6 @@
 
 #### Intro
-I am a DACA recipient, TAMU Alumna, and software engineer. I'm passionate about advocating for the underserved and underrepresented, as well as solving problems for them. Technology has given me so much opportunity, so I hope to use my technical background to provide opportunities for others. I'm available to consult interesting projects, offer advice, or just talk - feel free to [reach out](/contact).
+I'm a DACA recipient, TAMU Alumna, and software engineer. I'm passionate about advocating for the underserved and underrepresented, as well as solving problems for them. Technology has given me so much opportunity so I hope to use my technical background to provide opportunities for others. I'm available to do interviews, speak at events, consult interesting projects, offer advice, or just talk - feel free to [reach out](/contact).
 <!-- <br>
 I am available to consult on interesting projects. I am particularly interested in social impact, education, inclusivity, and space. I enjoy advising companies and may even be available for pro-bono work depending on the time commitment and the project. If you would like to arrange a meeting, I am based in New York but travel to the San Francisco Bay Area frequently. -->
 <br><br>
@@ -35,7 +35,7 @@ I recently moved to Seattle from the [RGV](https://www.welcomehomergv.com/) to s
 
 - [Joined SGA](http://www.thebatt.com/news/student-senate-supports-bringing-sul-ross-statue-stop-back-to/article_e9a5d504-f3a9-11e8-a8fc-5f813f022305.html?fbclid=IwAR0LGlPbXNsznuxjCIBIPCOs-UsYCYCQ4b-f-WU4VAWAuzQCFau74OojY-s) at TAMU to discover what it's like to [impact policy](https://senate.tamu.edu/wp-content/uploads/2018/11/S.B.-71-14-The-Rewriting-of-S.R.-7-Bill.pdf)
 
-- Worked 2 - 3 jobs concurrently through college ranging from [tutoring computer science courses](https://engineering.tamu.edu/cse/academics/peer-teachers/current-peer-teachers.html), resident advisor at Walton Hall, and various tech jobs to pay for university as DACA recipients cannot take out federal loans or qualify for federal aid
+- Worked 2 - 3 jobs concurrently through college ranging from [tutoring computer science courses](https://engineering.tamu.edu/cse/academics/peer-teachers/index.html), resident advisor at Walton Hall, and various tech jobs to pay for university as DACA recipients cannot take out federal loans or qualify for federal aid
 
 - [Made it possible for my parents to see me graduate](https://www.facebook.com/photo.php?fbid=2184177261672453&set=a.369577416465789&type=3&theater) and [advocated for others in similar situations](https://www.statesman.com/opinion/20190708/commentary-inland-border-patrol-checkpoints-shouldnt-hurt-those-who-live-here?fbclid=IwAR3e0ZCDroG-70UK0fQwzONK2rOb7-epPzj5mvzbtw53fjKgVsFftKGjkUM) thanks to some really good people
 

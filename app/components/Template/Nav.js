@@ -23,7 +23,7 @@ const Nav = () => (
       <h2>About</h2>
       <p>Hey, I&apos;m Julio. I like helping people.
             I am a <a href="https://www.ilrc.org/daca" target="_blank" rel="noopener noreferrer">DACA</a> recipient, <a href="https://tamu.edu/" target="_blank" rel="noopener noreferrer">Texas A&amp;M University</a> alumna, and
-            Software Engineer at <a href="http://qualtrics.com" target="_blank" rel="noopener noreferrer">Qualtrics</a>. A few things I&#39;m proud of include making it possible for&nbsp;
+            software engineer at <a href="http://qualtrics.com" target="_blank" rel="noopener noreferrer">Qualtrics</a>. A few things I&#39;m proud of include making it possible for&nbsp;
         <a href="https://www.statesman.com/opinion/20190708/commentary-inland-border-patrol-checkpoints-shouldnt-hurt-those-who-live-here?fbclid=IwAR3e0ZCDroG-70UK0fQwzONK2rOb7-epPzj5mvzbtw53fjKgVsFftKGjkUM" target="_blank" rel="noopener noreferrer">my parents see me graduate</a>,&nbsp;
         <a href="https://oaktrust.library.tamu.edu/handle/1969.1/175413" target="_blank" rel="noopener noreferrer">my research</a> with <a href="http://faculty.cse.tamu.edu/davis/welcome.html" target="_blank" rel="noopener noreferrer">Dr. Timothy Davis</a>, and my work on <Link to="/resume">various projects</Link>.
       </p>

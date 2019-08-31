@@ -41,7 +41,11 @@ const Nav = () => (
     <section id="footer">
       <ul className="icons">
         {data.map(s => (
-          <li key={s.label}><a href={s.link} target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={s.icon} /></a></li>
+          <li key={s.label}>
+            <a href={s.link} target="_blank" rel="noopener noreferrer">
+              <FontAwesomeIcon icon={s.icon} color={s.color} />
+            </a>
+          </li>
         ))}
       </ul>
       <p className="copyright">&copy; Julio Maldonado <Link to="/">juliomaldonado.com</Link>.</p>

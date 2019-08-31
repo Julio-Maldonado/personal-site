@@ -96,7 +96,11 @@ const Contact = () => {
         </div>
         <ul className="icons">
           {data.map(s => (
-            <li key={s.label}><a href={s.link} target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={s.icon} /></a></li>
+            <li key={s.label}>
+              <a href={s.link} target="_blank" rel="noopener noreferrer">
+                <FontAwesomeIcon icon={s.icon} color={s.color} />
+              </a>
+            </li>
           ))}
         </ul>
       </article>

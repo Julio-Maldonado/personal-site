@@ -11,21 +11,25 @@ const data = [
     link: 'https://github.com/Julio-Maldonado',
     label: 'Github',
     icon: faGithub,
+    color: '#211F1F',
   },
   {
     link: 'https://www.facebook.com/julio.maldonado.904',
     label: 'Facebook',
     icon: faFacebook,
+    color: '#3b5998',
   },
   {
     link: 'https://www.instagram.com/_julio_maldonado/',
     label: 'Instagram',
     icon: faInstagram,
+    color: '#cd486b',
   },
   {
     link: 'https://www.linkedin.com/in/juliom72/',
     label: 'LinkedIn',
     icon: faLinkedinIn,
+    color: '#0077B5',
   },
   // {
   //   link: 'https://angel.co/michael-d-angelo',
@@ -41,6 +45,7 @@ const data = [
     link: 'mailto:julio.maldonado.guzman@gmail.com',
     label: 'Email',
     icon: faEnvelope,
+    color: '#D44638',
   },
 ];
 

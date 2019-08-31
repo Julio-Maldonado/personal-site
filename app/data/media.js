@@ -4,7 +4,7 @@ const data = [
     subtitle: '',
     link: 'https://soundcloud.com/samson-tamijani/julio-maldonado',
     image: '/images/media/interview_graduation.jpg',
-    type: 'Interview',
+    type: 'Podcast Interview',
     alt: 'SoundCloud',
     date: 'August 15, 2019',
     desc: "Brought to the U.S. at age 3 from less than thirty miles away in Mexico, Maldonado's story reflects that of hundreds of thousands of undocumented immigrants...",
@@ -14,7 +14,7 @@ const data = [
     subtitle: 'A U.S. Border Patrol agent and a police dog, shown in 2013, keep watch at a checkpoint station in Falfurrias. [AP Photo/Eric Gay]',
     link: 'https://www.statesman.com/opinion/20190708/commentary-inland-border-patrol-checkpoints-shouldnt-hurt-those-who-live-here?fbclid=IwAR3e0ZCDroG-70UK0fQwzONK2rOb7-epPzj5mvzbtw53fjKgVsFftKGjkUM',
     image: '/images/media/border_patrol_checkpoint.jpg',
-    type: 'Article',
+    type: 'Legal Article',
     alt: 'Border Patrol',
     date: 'July 8, 2019',
     desc: 'Julio Maldonado’s parents had long dreamed of the day their son would graduate from Texas A&M. '
@@ -27,7 +27,7 @@ const data = [
     subtitle: '',
     link: 'https://oaktrust.library.tamu.edu/handle/1969.1/175413',
     image: '/images/media/oaktrust_research.png',
-    type: 'Academic Research',
+    type: 'Undergraduate Thesis',
     alt: 'GraphBLAS Research',
     date: 'June 10, 2019',
     desc: 'GraphBLAS is a C library written by Dr. Davis that allows users to easily represent graphs as sparse matrices. '
@@ -51,7 +51,7 @@ const data = [
     subtitle: 'The 71st Student Senate passed multiple resolutions in their Nov. 28 meeting, including a condemnation of Class Councils’ removal of a stop at the Lawrence Sullivan Ross statue from the 2018 Elephant Walk.',
     link: 'http://www.thebatt.com/news/student-senate-supports-bringing-sul-ross-statue-stop-back-to/article_e9a5d504-f3a9-11e8-a8fc-5f813f022305.html?fbclid=IwAR0LGlPbXNsznuxjCIBIPCOs-UsYCYCQ4b-f-WU4VAWAuzQCFau74OojY-s',
     image: '/images/media/senate_laptops.jpg',
-    type: 'Article',
+    type: 'SGA Article',
     alt: 'TAMU Student Senate',
     date: 'November 29, 2018',
     desc: 'With a vote of 27-18 with one abstention, the Senate passed a resolution condemning Class Councils’ decision to remove a stop at the Lawrence Sullivan Ross statue from the walk’s route...'
@@ -62,7 +62,7 @@ const data = [
     subtitle: 'Protesters line the balconies of the state Capitol rotunda in Austin, Texas, to protest Senate Bill 4. (Austin American-Statesman via AP / Ricardo Brazziell)',
     link: 'https://www.theeagle.com/news/local/sanctuary-legislation-could-affect-universities-colleges/article_250d2b1c-5d40-5241-80c7-34d00b44a62f.html',
     image: '/images/media/protesting_sb4_austin.jpg',
-    type: 'Article',
+    type: 'Legal Article',
     alt: 'SB 4',
     date: 'April 27, 2017',
     desc: 'As the Texas House debated into Wednesday night the consequences, goals and '
@@ -75,11 +75,11 @@ const data = [
     subtitle: 'Dorm residents take a stance, form campaign in response to hall’s alleged association with racist incident',
     link: 'http://www.thebatt.com/news/i-am-walton/article_b5cd61bc-db87-11e5-85e8-c377240bd6aa.html',
     image: '/images/media/walton_wednesday_day_1.jpg',
-    type: 'Article',
+    type: 'Advocacy Article',
     alt: 'Walton Hall',
     date: 'February 25, 2016',
     desc: "After a campus racial incident brought renewed scrutiny to their dorm's alleged actions, "
-    + "residents of Walton Hall dope to rebrand the residence hall's image as a positive and inclusive nevironment...",
+    + "residents of Walton Hall dope to rebrand the residence hall's image as a positive and inclusive environment...",
   },
 ];
 

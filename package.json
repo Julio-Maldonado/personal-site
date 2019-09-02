@@ -60,7 +60,6 @@
     "react": "^16.8.6",
     "react-burger-menu": "^2.6.10",
     "react-dom": "^16.8.6",
-    "react-form-validator-core": "^0.6.4",
     "react-ga": "^2.5.7",
     "react-helmet": "^5.2.1",
     "react-markdown": "^4.0.8",

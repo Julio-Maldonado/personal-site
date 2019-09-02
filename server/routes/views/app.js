@@ -13,13 +13,11 @@ import webpackMiddleware from 'webpack-dev-middleware';
 import webpackHotMiddleware from 'webpack-hot-middleware';
 import config from '../../../webpack/webpack.config';
 
-import data from '../../../app/data/contact';
-
-let bodyParser = require('body-parser');
+import contactData from '../../../app/data/contact';
 
 const list = () => (
   <ul className="icons">
-    {data.map(s => (
+    {contactData.map(s => (
       <li key={s.label}>
         <a href={s.link} target="_blank" rel="noopener noreferrer">
           <FontAwesomeIcon icon={s.icon} color={s.color} />
@@ -31,7 +29,41 @@ const list = () => (
 
 const htmlList = ReactDOMServer.renderToStaticMarkup(list);
 
-// import sendOne from './mailer';
+
+const DEFAULT_MESSAGE = '<h3>Howdy!</h3> <br/> <br/>'
++ "Thanks for signing up for my newsletter through <a href='https://www.juliomaldonado.com/'>JulioMaldonado.com</a> :)<br/><br/>"
++ '<img src="https://scontent-sea1-1.cdninstagram.com/vp/c04ec4e6cf1f88bd6e195569af4990a9/5DEFAB3F/t51.2885-15/e35/36940224_205770806781401_4820515398602457088_n.jpg?_nc_ht=scontent-sea1-1.cdninstagram.com" alt="Image of overview of Provo, Utah" height="100%" width="100%" /><br/><br/>'
++ "I'll share life experiences, lessons, big news, and more as they come.<br/><br/>"
++ 'Ciao!<br/><br/>'
++ '<i>Julio Maldonado</i><br/><br/><br/>'
++ "<center><i><small>Respond 'REMOVE ME' to this email at any time to be removed.</small></i></center>"
++ `${htmlList}`;
+
+const DEFAULT_SUBJECT = 'Hey New Friend!';
+
+const mailjet = require('node-mailjet').connect('c5fc907dcda19f8cefb3be106edfc67f', 'c179b4d9b4ee638401c04d18fd60a789');
+
+const request = (email, message, subject) => (
+  mailjet.post('send', { version: 'v3.1' }).request({
+    Messages: [
+      {
+        From: {
+          Email: 'julioharlingen@gmail.com',
+          Name: 'Julio Maldonado',
+        },
+        To: [
+          {
+            Email: email,
+            // Name: user.userName,
+          },
+        ],
+        Subject: subject,
+        TextPart: 'JulioMaldonado.com Newsleter Sign Up',
+        HTMLPart: message,
+      },
+    ],
+  })
+);
 
 const env = process.env.NODE_ENV || 'development';
 
@@ -60,43 +92,35 @@ const routes = (app) => {
     app.use(webpackHotMiddleware(compiler));
 
     app.post('/api/send_email', (req, res) => {
-      // console.clear();
-      // console.log(req);
-      // eslint-disable-next-line global-require
-      const mailjet = require('node-mailjet').connect('c5fc907dcda19f8cefb3be106edfc67f', 'c179b4d9b4ee638401c04d18fd60a789');
-      const request = mailjet.post('send', { version: 'v3.1' }).request({
-        Messages: [
-          {
-            From: {
-              Email: 'julioharlingen@gmail.com',
-              Name: 'Julio Maldonado',
-            },
-            To: [
-              {
-                Email: req.body.email,
-                // Name: user.userName,
-              },
-            ],
-            Subject: 'Hey New Friend!',
-            TextPart: 'JulioMaldonado.com Newsleter Sign Up',
-            HTMLPart: `${"<h3>Howdy - thanks for signing up for my newsletter at <a href='https://www.juliomaldonado.com/'>JulioMaldonado.com</a> :)</h3><br />"
-            + "I'll share advice, life experiences, lessons, and more as they come!<br/><br/>"
-            + 'Ciao! <br /> <br /> <i>Julio Maldonado</i><br /><br /><br />'
-            + "<center><i><small>Respond 'REMOVE ME' to this email at any time to be removed.</small></i></center>"}${htmlList}`,
-            // CustomID: 'AppGettingStartedTest',
-          },
-        ],
+      let body = '';
+
+      req.on('data', (data) => {
+        body = String(data);
       });
 
-      request
-        .then((result) => {
-          console.log(result.body);
-        })
-        .catch((err) => {
-          console.log(err.statusCode);
-        });
+      req.on('end', () => {
+        const allData = body.replace(/(\r\n|\n|\r)/gm, '');
 
-      res.send({ success: true });
+        request('juliom72@tamu.edu', allData, 'New user Sign Up')
+          .then(() => {
+            console.log('email sent to juliom72@tamu.edu');
+          })
+          .catch((err) => {
+            console.log(err.statusCode);
+          });
+
+        const bodyArray = body.split('\n');
+
+        const email = bodyArray[3].replace(/(\r\n|\n|\r)/gm, '');
+
+        request(email, DEFAULT_MESSAGE, DEFAULT_SUBJECT)
+          .then((result) => {
+            res.send({ success: true, result });
+          })
+          .catch((err) => {
+            res.send({ succes: false, statusCode: err.statusCode });
+          });
+      });
     });
 
     app.get('/*', (req, res) => {
@@ -106,41 +130,35 @@ const routes = (app) => {
     });
   } else {
     app.post('/api/send_email', (req, res) => {
-      // eslint-disable-next-line global-require
-      const mailjet = require('node-mailjet').connect('c5fc907dcda19f8cefb3be106edfc67f', 'c179b4d9b4ee638401c04d18fd60a789');
-      const request = mailjet.post('send', { version: 'v3.1' }).request({
-        Messages: [
-          {
-            From: {
-              Email: 'julioharlingen@gmail.com',
-              Name: 'Julio Maldonado',
-            },
-            To: [
-              {
-                Email: req.body.email,
-                // Name: user.userName,
-              },
-            ],
-            Subject: 'Hey New Friend!',
-            TextPart: 'JulioMaldonado.com Newsleter Sign Up',
-            HTMLPart: "<h3>Howdy - thanks for signing up for my newsletter at <a href='https://www.juliomaldonado.com/'>JulioMaldonado.com</a> :)</h3><br />"
-            + "I'll share advice, life experiences, lessons, and more as they come!<br/><br/>"
-            + 'Ciao! <br /> <br /> <i>Julio Maldonado</i><br /><br /><br />'
-            + "<center><i><small>Respond 'REMOVE ME' to this email at any time to be removed.</small></i></center>",
-            // CustomID: 'AppGettingStartedTest',
-          },
-        ],
+      let body = '';
+
+      req.on('data', (data) => {
+        body = String(data);
       });
 
-      request
-        .then((result) => {
-          console.log(result.body);
-        })
-        .catch((err) => {
-          console.log(err.statusCode);
-        });
+      req.on('end', () => {
+        const allData = body.replace(/(\r\n|\n|\r)/gm, '');
 
-      res.send({ success: true });
+        request('juliom72@tamu.edu', allData, 'New user Sign Up')
+          .then(() => {
+            console.log('email sent to juliom72@tamu.edu');
+          })
+          .catch((err) => {
+            console.log(err.statusCode);
+          });
+
+        const bodyArray = body.split('\n');
+
+        const email = bodyArray[3].replace(/(\r\n|\n|\r)/gm, '');
+
+        request(email, DEFAULT_MESSAGE, DEFAULT_SUBJECT)
+          .then((result) => {
+            res.send({ success: true, result });
+          })
+          .catch((err) => {
+            res.send({ succes: false, statusCode: err.statusCode });
+          });
+      });
     });
 
     app.use('/dist', express.static(path.join(__dirname, '../../../dist')));

@@ -18,14 +18,17 @@ const defaultEmailInputStyles = {
   width: 350,
 };
 
-const sendEmail = async (email) => {
-  alert(email);
-  return (fetch('/api/send_email', {
-    method: 'POST',
-    headers: { Accept: 'application/json' },
-    body: { email },
-  }).then(response => response.json()));
-};
+const sendEmail = async email => (fetch('/api/send_email', {
+  // mode: 'cors', // no-cors, cors, *same-origin
+  // cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
+  // credentials: 'same-origin', // include, *same-origin, omit
+  headers: {
+    // 'Content-Type': 'application/json',
+    Accept: 'application/json',
+  },
+  method: 'POST',
+  body: { email },
+}).then(response => response.json()));
 
 class Index extends React.Component {
   state = {
@@ -33,6 +36,7 @@ class Index extends React.Component {
     emailInputStyles: defaultEmailInputStyles,
     successModal: false,
     failModal: false,
+    invalidEmailModal: false,
   }
 
   updateEmail = (e) => {
@@ -63,13 +67,21 @@ class Index extends React.Component {
     this.setState({ successModal: false });
   }
 
+  onInvalidEmailModalOpen = () => {
+    this.setState({ invalidEmailModal: true });
+  };
+
+  onInvalidEmailModalClose = () => {
+    this.setState({ invalidEmailModal: false });
+  };
+
   onFailModalOpen = () => {
     this.setState({ failModal: true });
-  };
+  }
 
   onFailModalClose = () => {
     this.setState({ failModal: false });
-  };
+  }
 
   render() {
     return (
@@ -117,14 +129,15 @@ class Index extends React.Component {
                 onClick={() => {
                   const { email } = this.state;
                   if (this.validateEmail(email)) {
-                    alert(email);
                     sendEmail(email).then(({ success }) => {
                       if (success) {
                         this.onSuccessModalOpen();
+                      } else {
+                        this.onFailModalOpen();
                       }
                     });
                   } else {
-                    this.onFailModalOpen();
+                    this.onInvalidEmailModalOpen();
                     this.updateStyles();
                   }
                 }}
@@ -138,9 +151,10 @@ class Index extends React.Component {
         <Modal open={this.state.successModal} onClose={this.onSuccessModalClose} center>
           <br />
           <br />
-          <h2>Thanks for signing up, friend</h2>
-          <h1>Let&apos;s connect on social media :)</h1>
+          <center><h2>Thanks for signing up, friend</h2></center>
+          <center><h1>Let&apos;s make some change</h1></center>
           <br />
+          <center><h1>Connect on social media :)</h1></center>
           <br />
           <br />
           <ul
@@ -165,8 +179,38 @@ class Index extends React.Component {
         <Modal open={this.state.failModal} onClose={this.onFailModalClose} center>
           <br />
           <br />
-          <h2>Use a valid email address :)</h2>
+          <center><h2>Something went wrong, friend.</h2></center>
+          <center><p>It&apos;s not your fault, it&apos;s mine.</p></center>
           <br />
+          <center><b>Connect on social media for now</b></center>
+          <br />
+          <br />
+          <ul
+            style={{
+              position: 'absolute',
+              left: '50%',
+              transform: 'translate(-50%, -50%)',
+              margin: 'auto',
+              bottom: '10%',
+            }}
+            className="icons"
+          >
+            {socialData.map(s => (
+              <li key={s.label}>
+                <a href={s.link} target="_blank" rel="noopener noreferrer">
+                  <FontAwesomeIcon icon={s.icon} color={s.color} />
+                </a>
+              </li>
+            ))}
+          </ul>
+        </Modal>
+        <Modal open={this.state.invalidEmailModal} onClose={this.onInvalidEmailModalClose} center>
+          <br />
+          <br />
+          <center><h2>Can&apos;t trick me :)</h2></center>
+          <center><h1>Try a valid email address</h1></center>
+          <br />
+          <center><b>Connect on social media</b></center>
           <br />
           <br />
           <ul

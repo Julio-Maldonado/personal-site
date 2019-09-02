@@ -16,8 +16,9 @@ const basePath = process.env.BASE_PATH || '/';
 const app = express();
 
 app.use(compress());
-app.use(bodyParser.urlencoded({ extended: false }));
-app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json({ type: 'application/*+json' }))
+
 
 // prevents logs from polluting test results
 if (!module.parent) app.use(morgan('combined'));

@@ -7,12 +7,12 @@ import ScriptExtHtmlWebpackPlugin from 'script-ext-html-webpack-plugin';
 const basePath = process.env.BASE_PATH || '';
 
 export default {
-  devtool: 'eval-source-map',
-  mode: 'development',
   entry: [
     'webpack-hot-middleware/client?path=//localhost:7999/__webpack_hmr&reload=true',
     path.join(__dirname, '../app/entry.js'),
   ],
+  mode: 'development',
+  devtool: 'eval-source-map',
   output: {
     path: path.join(__dirname, '../dist/'),
     filename: '[name].js',
@@ -41,8 +41,7 @@ export default {
         test: /\.js?$/,
         exclude: /node_modules/,
         loader: 'babel-loader',
-      },
-      {
+      }, {
         test: /\.md$/,
         use: [{
           loader: 'raw-loader',

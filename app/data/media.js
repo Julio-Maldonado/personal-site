@@ -79,7 +79,7 @@ const data = [
     alt: 'Walton Hall',
     date: 'February 25, 2016',
     desc: "After a campus racial incident brought renewed scrutiny to their dorm's alleged actions, "
-    + "residents of Walton Hall dope to rebrand the residence hall's image as a positive and inclusive environment...",
+    + "residents of Walton Hall hope to rebrand the residence hall's image as a positive and inclusive environment...",
   },
 ];
 

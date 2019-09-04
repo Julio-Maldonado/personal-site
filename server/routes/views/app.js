@@ -36,8 +36,8 @@ const DEFAULT_MESSAGE = '<h3>Howdy!</h3> <br/> <br/>'
 + "I'll share life experiences, lessons, big news, and more as they come.<br/><br/>"
 + 'Ciao!<br/><br/>'
 + '<i>Julio Maldonado</i><br/><br/><br/>'
-+ "<center><i><small>Respond 'REMOVE ME' to this email at any time to be removed.</small></i></center>"
-+ `${htmlList}`;
++ "<center><i><small>Respond 'REMOVE ME' to this email at any time to be removed.</small></i></center>";
+// + `${htmlList}`;
 
 const DEFAULT_SUBJECT = 'Hey New Friend!';
 
@@ -129,37 +129,39 @@ const routes = (app) => {
       res.send(content);
     });
   } else {
-    app.post('/api/send_email', (req, res) => {
-      let body = '';
+    // app.post('/api/send_email', (req, res) => {
+    //   console.log('STARTING API/SEND_EMAIL ACTION');
+    //   let body = '';
 
-      req.on('data', (data) => {
-        body = String(data);
-      });
+    //   req.on('data', (data) => {
+    //     body = String(data);
+    //     console.log({ body });
+    //   });
 
-      req.on('end', () => {
-        const allData = body.replace(/(\r\n|\n|\r)/gm, '');
+    //   req.on('end', () => {
+    //     const allData = body.replace(/(\r\n|\n|\r)/gm, '');
+    //     console.log({ allData });
+    //     request('juliom72@tamu.edu', allData, 'New user Sign Up')
+    //       .then(() => {
+    //         console.log('email sent to juliom72@tamu.edu');
+    //       })
+    //       .catch((err) => {
+    //         console.log(err);
+    //       });
 
-        request('juliom72@tamu.edu', allData, 'New user Sign Up')
-          .then(() => {
-            console.log('email sent to juliom72@tamu.edu');
-          })
-          .catch((err) => {
-            console.log(err.statusCode);
-          });
+    //     const bodyArray = body.split('\n');
 
-        const bodyArray = body.split('\n');
+    //     const email = bodyArray[3].replace(/(\r\n|\n|\r)/gm, '');
 
-        const email = bodyArray[3].replace(/(\r\n|\n|\r)/gm, '');
-
-        request(email, DEFAULT_MESSAGE, DEFAULT_SUBJECT)
-          .then((result) => {
-            res.send({ success: true, result });
-          })
-          .catch((err) => {
-            res.send({ succes: false, statusCode: err.statusCode });
-          });
-      });
-    });
+    //     request(email, DEFAULT_MESSAGE, DEFAULT_SUBJECT)
+    //       .then((result) => {
+    //         res.send({ success: true, result });
+    //       })
+    //       .catch((err) => {
+    //         res.send({ succes: false, statusCode: err.statusCode });
+    //       });
+    //   });
+    // });
 
     app.use('/dist', express.static(path.join(__dirname, '../../../dist')));
     const content = fs.readFileSync(path.join(__dirname, '../../../dist/index.html'), 'utf8');

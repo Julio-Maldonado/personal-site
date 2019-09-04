@@ -17,7 +17,7 @@ const app = express();
 
 app.use(compress());
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use(bodyParser.json({ type: 'application/*+json' }))
+app.use(bodyParser.json({ type: 'application/*+json' }));
 
 
 // prevents logs from polluting test results

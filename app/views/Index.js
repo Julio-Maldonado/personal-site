@@ -19,11 +19,11 @@ const defaultEmailInputStyles = {
 };
 
 const sendEmail = async email => (fetch('https://blooming-beyond-72124.herokuapp.com/api/send_email', {
-  mode: 'cors', // no-cors, cors, *same-origin
-  cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
+  mode: 'no-cors', // no-cors, cors, *same-origin
+  // cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
   // credentials: 'same-origin', // include, *same-origin, omit
   headers: {
-    // 'Content-Type': 'application/json',
+    'Content-Type': 'application/json',
     Accept: 'application/json',
   },
   method: 'POST',

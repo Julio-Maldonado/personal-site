@@ -77,11 +77,13 @@ const Contact = () => {
           <p>I&apos;m available to speak at events, interview for podcasts, consult interesting projects,
             {' '}answer questions about code, or just talk.
             <br />
+            <br />
             Feel free to reach out. You can email me at&nbsp;
             <a href={`mailto:${message}@gmail.com`}>
               <span>{message}@gmail.com</span>.
             </a>
           </p>
+          <br />
           {/* <div
             className="inline-container"
             style={validateText(message) ? {} : { color: 'red' }}

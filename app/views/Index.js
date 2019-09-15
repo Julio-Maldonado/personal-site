@@ -18,17 +18,26 @@ const defaultEmailInputStyles = {
   width: 350,
 };
 
-const sendEmail = async email => (fetch('https://blooming-beyond-72124.herokuapp.com/api/send_email', {
-  mode: 'no-cors', // no-cors, cors, *same-origin
-  // cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
-  // credentials: 'same-origin', // include, *same-origin, omit
-  headers: {
-    'Content-Type': 'application/json',
-    Accept: 'application/json',
-  },
-  method: 'POST',
-  body: { email },
-}).then(response => response.json()));
+const sendEmail = async email => {
+  try {
+    const resp = await fetch('https://blooming-beyond-72124.herokuapp.com/api/send_email', {
+      mode: 'cors',
+      method: 'POST',
+      body: JSON.stringify({ "email": email }),
+      headers: {
+        'Content-Type': 'application/json',
+        'Origin': 'juliomaldonado.com'
+      }
+    });
+
+    return resp.json();
+  } catch (e) {
+    console.error(e);
+    return { 'success': false }
+  } finally {
+    return { 'success': false }
+  }
+}
 
 class Index extends React.Component {
   state = {
@@ -130,6 +139,7 @@ class Index extends React.Component {
                   const { email } = this.state;
                   if (this.validateEmail(email)) {
                     sendEmail(email).then(({ success }) => {
+                      console.log({ success })
                       if (success) {
                         this.onSuccessModalOpen();
                       } else {

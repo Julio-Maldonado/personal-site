@@ -20,23 +20,25 @@ const defaultEmailInputStyles = {
 
 const sendEmail = async email => {
   try {
+    console.log('bout to make api request');
     const resp = await fetch('https://blooming-beyond-72124.herokuapp.com/api/send_email', {
       mode: 'cors',
       method: 'POST',
       body: JSON.stringify({ "email": email }),
       headers: {
-        'Content-Type': 'application/json',
-        'Origin': 'juliomaldonado.com'
+        'Content-Type': 'application/json'
       }
     });
 
     return resp.json();
   } catch (e) {
     console.error(e);
-    return { 'success': false }
-  } finally {
+    console.log(e);
     return { 'success': false }
   }
+  console.log('try and cancel failed')
+  
+  return { 'success': false }
 }
 
 class Index extends React.Component {
@@ -248,3 +250,4 @@ class Index extends React.Component {
 }
 
 export default Index;
+

@@ -5,7 +5,9 @@ const positions = [
     link: 'https://qualtrics.com',
     daterange: 'July 2019 - Present',
     points: [
-      'Just started :)',
+      "Eat lots of snacks and use company massage chairs most mornings",
+      "My code's affect hundreds of thousands of users on a near-daily basis",
+      "Engage in near daily client calls to ensure our technical solutions satisfy our clients' business needs"
     ],
   },
   {

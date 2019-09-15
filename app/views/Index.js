@@ -129,7 +129,7 @@ class Index extends React.Component {
           ))}
           <header>
             <div className="title">
-              <h1 style={{ position: 'relative' }}>Sign up for my newsletter to keep in touch</h1>
+              <h1 style={{ position: 'relative' }}>Sign up for my newsletter to stay updated</h1>
               <input
                 placeholder="example@domain.com"
                 onChange={this.updateEmail}

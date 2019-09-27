@@ -1,10 +1,15 @@
+/* eslint-disable react/jsx-indent */
+/* eslint-disable no-nested-ternary */
+/* eslint-disable react/button-has-type */
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Modal from 'react-responsive-modal';
+import Loader from 'react-loader-spinner';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import socialData from '../../data/contact';
+import { noAuto } from '@fortawesome/fontawesome-svg-core';
 
 const defaultEmailInputStyles = {
   padding: '10px',
@@ -14,28 +19,25 @@ const defaultEmailInputStyles = {
   width: 350,
 };
 
-const sendEmail = async email => {
+const sendEmail = async (email) => {
   try {
     console.log('bout to make api request');
     const resp = await fetch('https://blooming-beyond-72124.herokuapp.com/api/send_email', {
       mode: 'cors',
       method: 'POST',
-      body: JSON.stringify({ "email": email }),
+      body: JSON.stringify({ email }),
       headers: {
-        'Content-Type': 'application/json'
-      }
+        'Content-Type': 'application/json',
+      },
     });
 
     return resp.json();
   } catch (e) {
     console.error(e);
     console.log(e);
-    return { 'success': false }
+    return { success: false };
   }
-  console.log('try and cancel failed')
-  
-  return { 'success': false }
-}
+};
 
 class Nav extends React.Component {
   state = {
@@ -44,6 +46,7 @@ class Nav extends React.Component {
     successModal: false,
     invalidEmailModal: false,
     failModal: false,
+    loading: false,
   }
 
   updateEmail = (e) => {
@@ -92,7 +95,7 @@ class Nav extends React.Component {
 
   render() {
     return (
-      <div >
+      <div>
         <section id="sidebar">
           <section id="intro">
             <Link to="/" className="logo">
@@ -106,33 +109,37 @@ class Nav extends React.Component {
 
           <section className="blurb">
             {/* <div className="title"> */}
-              <h2 style={{ position: 'relative' }}>Sign up for my newsletter to keep in touch</h2>
-              <input
-                placeholder="example@domain.com"
-                onChange={this.updateEmail}
-                style={this.state.emailInputStyles}
-              />
-              <br />
-              <button
-                onClick={() => {
-                  const { email } = this.state;
-                  if (this.validateEmail(email)) {
-                    sendEmail(email).then(({ success }) => {
-                      console.log({ success })
-                      if (success) {
-                        this.onSuccessModalOpen();
-                      } else {
-                        this.onFailModalOpen();
-                      }
-                    });
-                  } else {
-                    this.onInvalidEmailModalOpen();
-                    this.updateStyles();
-                  }
-                }}
-              >
-                Sign me up!
-              </button>
+            <h2 style={{ position: 'relative' }}>Sign up for my newsletter to keep in touch</h2>
+            <input
+              placeholder="example@domain.com"
+              onChange={this.updateEmail}
+              style={this.state.emailInputStyles}
+            />
+            <br />
+            <button
+              onClick={() => {
+                this.setState({ loading: true });
+                const { email } = this.state;
+                if (this.validateEmail(email)) {
+                  sendEmail(email).then(({ success }) => {
+                    console.log({ success });
+                    if (success) {
+                      this.setState({ loading: false });
+                      this.onSuccessModalOpen();
+                    } else {
+                      this.setState({ loading: false });
+                      this.onFailModalOpen();
+                    }
+                  });
+                } else {
+                  this.setState({ loading: false });
+                  this.onInvalidEmailModalOpen();
+                  this.updateStyles();
+                }
+              }}
+            >
+              Sign me up!
+            </button>
             {/* </div> */}
           </section>
         <Modal open={this.state.successModal} onClose={this.onSuccessModalClose} center>
@@ -238,7 +245,37 @@ class Nav extends React.Component {
               </li>
             </ul>
           </section>
-
+          {this.state.loading
+            ? <div>
+                <div style={{
+                  position: 'fixed',
+                  left: '0vw',
+                  top: '0vh',
+                  width: '100vw',
+                  height: '100vh',
+                  zIndex: 9999,
+                  backgroundColor: '#FFFFFF',
+                  opacity: 0.5,
+                }}
+                />
+                <div style={{
+                  position: 'fixed',
+                  translate: "translate('-50%', '-50%')",
+                  left: '45vw',
+                  top: '15vh',
+                  zIndex: 9999,
+                }}
+                >
+                  <Loader
+                    type="ThreeDots"
+                    color="black"
+                    height="10vh"
+                    width="10vw"
+                  />
+                </div>
+              </div>
+            : null
+          }
           <section id="footer">
             <ul className="icons">
               {socialData.map(s => (
@@ -252,8 +289,8 @@ class Nav extends React.Component {
             <p className="copyright">&copy; Julio Maldonado <Link to="/">juliomaldonado.com</Link>.</p>
           </section>
         </section>
-        </div>
-    )
+      </div>
+    );
   }
 }
 

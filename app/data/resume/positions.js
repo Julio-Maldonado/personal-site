@@ -5,9 +5,11 @@ const positions = [
     link: 'https://qualtrics.com',
     daterange: 'July 2019 - Present',
     points: [
-      "My codes affect hundreds of thousands of users on a daily basis",
-      "Engage in daily client calls to ensure our technical solutions satisfy our clients' business needs",
-      "Eat lots of snacks, skate around the office, and use company massage chairs most mornings"
+      'Eat lots of snacks',
+      'Skate around the office',
+      'Use company massage chairs most mornings',
+      'Write codes that affect hundreds of thousands of users on a daily basis',
+      "Engage in daily client communications to ensure our technical solutions satisfy clients' business needs",
     ],
   },
   {

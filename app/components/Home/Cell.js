@@ -4,6 +4,14 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import dayjs from 'dayjs';
 import url from 'url';
+
+import { faThumbsUp } from '@fortawesome/free-solid-svg-icons';
+import { faShare } from '@fortawesome/free-solid-svg-icons';
+import { faComment } from '@fortawesome/free-solid-svg-icons';
+import faFacebook from '@fortawesome/fontawesome-free-brands/faFacebookF';
+import faLinkedinIn from '@fortawesome/fontawesome-free-brands/faLinkedinIn';
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 // import aTag from '../CustomaTag';
 
 const Cell = (props) => {
@@ -19,8 +27,27 @@ const Cell = (props) => {
           <img src={url.resolve(BASE_PATH, data.image)} alt={data.alt} height="100%" width="100%" />
         </a>
         <div className="description">
-          <p><b>{data.type}</b> <br /> <i>{data.desc}</i></p>
+          <p>
+            <b>{data.type}</b>
+            <br />
+            <i>{data.desc}</i>
+            <br />
+            <br />
+            <a href={data.fb.link} target="_blank" rel="noopener noreferrer">
+              <FontAwesomeIcon icon={faThumbsUp} color="#3b5998" />
+            </a>
+            &nbsp;{data.fb.likes}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href={data.fb.link} target="_blank" rel="noopener noreferrer">
+              <FontAwesomeIcon icon={faComment} color="#3b5998" />
+            </a>
+            &nbsp;{data.fb.comments}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href={data.fb.link} target="_blank" rel="noopener noreferrer">
+              <FontAwesomeIcon icon={faShare} color="#3b5998" />
+            </a>
+            &nbsp;{data.fb.shares}
+          </p>
         </div>
+
       </article>
     </div>
   );
@@ -36,6 +63,8 @@ Cell.propTypes = {
     type: PropTypes.string.isRequired,
     videos: PropTypes.array.isRequired,
     alt: PropTypes.string.isRequired,
+    fb: PropTypes.object.isRequired,
+
   }).isRequired,
 };
 

@@ -5,11 +5,37 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Modal from 'react-responsive-modal';
 import Loader from 'react-loader-spinner';
-
+// import { Shake, ShakeLittle } from 'reshake';
+// import { Motion, spring } from 'react-motion';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
+// import signedUpUsers from '../../data/signedUpUsers';
 import socialData from '../../data/contact';
-import { noAuto } from '@fortawesome/fontawesome-svg-core';
+// import { noAuto } from '@fortawesome/fontawesome-svg-core';
+
+const inputPalette = [
+  '#98fb98',
+  '#88e188',
+  '#79c879',
+  '#6aaf6a',
+  '#5b965b',
+  '#4c7d4c',
+  '#3c643c',
+  '#2d4b2d',
+  '#1e321e',
+  '#0f190f',
+  '#000000',
+  '#0f190f',
+  '#1e321e',
+  '#2d4b2d',
+  '#3c643c',
+  '#4c7d4c',
+  '#5b965b',
+  '#6aaf6a',
+  '#79c879',
+  '#88e188',
+  '#98fb98',
+];
 
 const defaultEmailInputStyles = {
   padding: '10px',
@@ -18,6 +44,23 @@ const defaultEmailInputStyles = {
   marginBottom: '12px',
   width: 350,
 };
+
+let signedUpUsers = [
+  'julioharlingen@gmail.com',
+  'julio.maldonado.guzman@gmail.com',
+  'juliom@qualtrics.com',
+  'juliom72@tamu.edu',
+  'harlingenjulio@gmail.com',
+  'mannymaldonado10@gmail.com',
+  'alexandrayanez1998@gmail.com',
+  'klarissa.espino@gmail.com',
+  'idaniacrespo@hotmail.com',
+  'delaney.gill3@yahoo.com',
+  'paolajeje5@gmail.com',
+  'avillarreal218@outlook.com',
+  'mitch.nigro@gmail.com',
+  'camophlagek@gmail.com',
+];
 
 const sendEmail = async (email) => {
   try {
@@ -46,7 +89,30 @@ class Nav extends React.Component {
     successModal: false,
     invalidEmailModal: false,
     failModal: false,
+    alreadySignedUpModal: false,
     loading: false,
+    // shake: true,
+  }
+
+  componentDidMount() {
+    this.counter = 0;
+    this.interval = setInterval(this.updateAttractiveInput, 250);
+  }
+
+  componentWillUnmount() {
+    clearInterval(this.interval);
+  }
+
+  updateAttractiveInput = () => {
+    this.setState((prevState) => {
+      if (prevState.email !== '' || prevState.failModal === true) {
+        return { emailInputStyles: prevState.emailInputStyles, shake: false };
+      }
+      const emailInputStyles = Object.assign({}, prevState.emailInputStyles);
+      emailInputStyles.borderColor = inputPalette[this.counter];
+      return { emailInputStyles, shake: this.counter % 2 === 1 };
+    });
+    this.counter = (this.counter + 1) % inputPalette.length;
   }
 
   updateEmail = (e) => {
@@ -93,7 +159,16 @@ class Nav extends React.Component {
     this.setState({ failModal: false });
   }
 
+  alreadySignedUpModalOpen = () => {
+    this.setState({ alreadySignedUpModal: true });
+  }
+
+  alreadySignedUpModalClose = () => {
+    this.setState({ alreadySignedUpModal: false });
+  }
+
   render() {
+    console.log(signedUpUsers);
     return (
       <div>
         <section id="sidebar">
@@ -109,7 +184,26 @@ class Nav extends React.Component {
 
           <section className="blurb">
             {/* <div className="title"> */}
-            <h2 style={{ position: 'relative' }}>Sign up for my newsletter to keep in touch</h2>
+            <h2 style={{ position: 'relative' }}>
+              Sign up for my newsletter to keep in touch
+              {!signedUpUsers.includes(this.state.email) ? ` (Be the ${signedUpUsers.length + 1}th sign up!)` : ' (Thanks for signing up friend!)'}
+            </h2>
+            {/* <Shake
+              h={100}
+              dur={1000}
+              int={50}
+              max={100}
+              fixed
+              fixedStop
+              freez={false}
+              active={this.state.shake}
+            >
+              <input
+                placeholder="example@domain.com"
+                onChange={this.updateEmail}
+                style={this.state.emailInputStyles}
+              />
+            </Shake> */}
             <input
               placeholder="example@domain.com"
               onChange={this.updateEmail}
@@ -119,13 +213,18 @@ class Nav extends React.Component {
             <button
               onClick={() => {
                 this.setState({ loading: true });
-                const { email } = this.state;
-                if (this.validateEmail(email)) {
+                let { email } = this.state;
+                email = email.toLowerCase();
+                if (signedUpUsers.includes(email)) {
+                  this.alreadySignedUpModalOpen();
+                  this.setState({ loading: false });
+                } else if (this.validateEmail(email)) {
                   sendEmail(email).then(({ success }) => {
-                    console.log({ success });
+                    // console.log({ success });
                     if (success) {
                       this.setState({ loading: false });
                       this.onSuccessModalOpen();
+                      signedUpUsers.push(this.state.emeail);
                     } else {
                       this.setState({ loading: false });
                       this.onFailModalOpen();
@@ -203,6 +302,33 @@ class Nav extends React.Component {
           <br />
           <center><h2>Can&apos;t trick me :)</h2></center>
           <center><h1>Try a valid email address</h1></center>
+          <br />
+          <center><b>Connect on social media</b></center>
+          <br />
+          <br />
+          <ul
+            style={{
+              position: 'absolute',
+              left: '50%',
+              transform: 'translate(-50%, -50%)',
+              margin: 'auto',
+              bottom: '10%',
+            }}
+            className="icons"
+          >
+            {socialData.map(s => (
+              <li key={s.label}>
+                <a href={s.link} target="_blank" rel="noopener noreferrer">
+                  <FontAwesomeIcon icon={s.icon} color={s.color} />
+                </a>
+              </li>
+            ))}
+          </ul>
+        </Modal>
+        <Modal open={this.state.alreadySignedUpModal} onClose={this.alreadySignedUpModalClose} center>
+          <br />
+          <br />
+          <center><h2>You've already signed up friend :)</h2></center>
           <br />
           <center><b>Connect on social media</b></center>
           <br />
